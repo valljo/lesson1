@@ -21,4 +21,4 @@ puts a
 
 #puts b #undefined local variable.
 
-puts c #defined in the outer scope which is accessible by inner scope blocks
+puts c #defined in the outer scope which is accessible by nested inner scope blocks
