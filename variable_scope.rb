@@ -14,11 +14,11 @@ c = 8
     c = 4 #accessing defined variable at outerscope
     d = 5     
   end
-  #puts c #undefined local variable.
+  #puts c undefined local variable.
 end
 
 puts a
 
-#puts b #undefined local variable.
+#puts b undefined local variable.
 
 puts c #defined in the outer scope which is accessible by nested inner scope blocks
