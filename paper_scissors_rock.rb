@@ -1,4 +1,4 @@
-def player_choice(play) #Choice of player
+def player_choice(play) #Choice of player to convert to number
   case play
   when 'p'
     play = 1
@@ -20,8 +20,8 @@ def print_choice(play) #Print choice
   end
 end
 
-def print_result(choice, computer_play) #Print result
-  player_play = player_choice(choice) #Returns a number based on selected
+def print_result(choice, computer_play) #Method to print result
+  player_play = player_choice(choice) #Returns a number based on what the player selected
   player_tool = print_choice(player_play) #Prints what the player selected
   computer_tool = print_choice(computer_play) #Prints what the computer selected
 
