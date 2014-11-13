@@ -1,4 +1,4 @@
-def player_choice(play)
+def player_choice(play) #Choice of player
   case play
   when 'p'
     play = 1
@@ -9,7 +9,7 @@ def player_choice(play)
   end
 end
 
-def print_choice(play)
+def print_choice(play) #Print choice
   case play
   when 1
     "Paper"
@@ -20,10 +20,10 @@ def print_choice(play)
   end
 end
 
-def print_result(choice, computer_play)
-  player_play = player_choice(choice)
-  player_tool = print_choice(player_play)
-  computer_tool = print_choice(computer_play)
+def print_result(choice, computer_play) #Print result
+  player_play = player_choice(choice) #Returns a number based on selected
+  player_tool = print_choice(player_play) #Prints what the player selected
+  computer_tool = print_choice(computer_play) #Prints what the computer selected
 
   puts "You picked #{player_tool} and computer picked #{computer_tool}."
 
@@ -45,6 +45,7 @@ def print_result(choice, computer_play)
     end
 end
 
+
 begin
   choice = ''
   play_again = ''
@@ -52,18 +53,16 @@ begin
   loop do
     puts "Choose one: (P/R/S)"
     choice = gets.chomp
-    if (choice == 'p') || (choice == 'r') || (choice == 's')
+    if (choice == 'p') || (choice == 'r') || (choice == 's') #Validation
       break
     end
   end  
-
   computer_play = rand(1..3)
   puts print_result(choice, computer_play)
-
   loop do
     puts "Play again? (Y/N)"
     play_again = gets.chomp
-    if (play_again == 'y' || play_again == 'n')
+    if (play_again == 'y' || play_again == 'n') #Validation
        break
     end
   end
