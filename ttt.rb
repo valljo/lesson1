@@ -26,10 +26,20 @@ loop do
   computer_marker = 'O'
   check_for_space = '' #used with two_in_a_row method
   flag = 0 #0 indicates not processed by block
-  
-  puts "Choose a position from 1 to 9 to place a marker:"
+  player_select = ''
 
-  player_select = gets.chomp.to_i
+  begin
+    loop do
+      puts "Choose a position from 1 to 9 to place a marker:"
+      player_select = gets.chomp.to_i
+      if grid_hash[player_select] != nil
+        puts "This square has a marker. Choose another position"
+      else
+        break      
+      end
+    end  
+  end until grid_hash.keys.include?(player_select)
+ 
 
   grid_hash[player_select] = 'x'
 
