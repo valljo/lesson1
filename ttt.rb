@@ -27,7 +27,7 @@ loop do
   check_for_space = '' #used with two_in_a_row method
   flag = 0 #0 indicates not processed by block
   
-  puts "Choose a position from 1 to 9 to place a piece:"
+  puts "Choose a position from 1 to 9 to place a marker:"
 
   player_select = gets.chomp.to_i
 
