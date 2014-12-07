@@ -15,7 +15,7 @@ def check_sum_of_card_values_in_hand(caller_hand_array) #returns sum of card val
   sum_of_card_values = 0
   caller_hand_array.each do |card_hash| 
     card_hash.each do |k, v|
-      if (card_value_counter_array.reduce(:+) == nil) #checks is caller's hand is empty
+      if (card_value_counter_array.reduce(:+) == nil) #checks if caller's hand is empty
         sum_of_card_values = 0
       else
         sum_of_card_values = card_value_counter_array.reduce(:+)
@@ -63,12 +63,12 @@ array_dealer_hand = []
 array_cards_dealt = []
 player_choice = 0
 flag_to_indicate_win = 0
-  
+
 2.times do # Deal player two cards at the start
   deal_card(array_card_deck, array_card_suits, array_cards_dealt, array_player_hand)  
 end
 
-2.times do # Deal player two cards at the start
+2.times do # Deal dealer two cards at the start
   deal_card(array_card_deck, array_card_suits, array_cards_dealt, array_dealer_hand)  
 end
 
@@ -121,7 +121,6 @@ if dealer_hand_total == 21
 end
 puts "Current value of dealer's hand: #{dealer_hand_total}"
 
-
 if (players_hand_total != 21 && dealer_hand_total != 21)
   begin
     puts "Player's turn..."
@@ -166,7 +165,7 @@ if (players_hand_total != 21 && dealer_hand_total != 21)
   end
   
   if flag_to_indicate_win == 0
-    if players_hand_total == dealer_hand_total  # Enter tie code here
+    if players_hand_total == dealer_hand_total
       puts "Player and dealer tie!"
     else
       if players_hand_total > dealer_hand_total && players_hand_total < 21
